@@ -1,5 +1,6 @@
 var express=require('express');
 var app=express();
+//web3 to interact with the ethereum blockchain 
 var Web3=require('web3');
 var web3=new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
 var contarctAddress="0x51FBF45Fa94e6FDbf2aBE79a52DA4bC47Ba97d0b";
@@ -89,6 +90,7 @@ var abi=[
 	}
 ];
 var contract=new web3.eth.Contract(abi,contarctAddress);
+//calling Contract funtion
 async function contactfunction()
 {
     let details=await contract.methods.getResult().call();
