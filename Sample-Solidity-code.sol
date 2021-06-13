@@ -2,8 +2,8 @@ pragma solidity ^0.5.0;
 
 contract Testing
 {
-    uint256 arrayvalue=[3];
     
+    //function return the value 
     function getResult() view public returns(uint256)
     {
         uint256 a=5;
@@ -11,12 +11,13 @@ contract Testing
         uint256 c=a+b;
         return c;
     }
-    
+    //function takes the input and returns the value
     function viewResult(uint256 a,uint256 b) view public  returns(uint256)
     {
         uint256 c=a+b;
         return c;
     }
+    //function checks the condition and return the bool value
     function checkstate(uint256 a) view public returns(bool)
     {
         if(a==7)
@@ -26,6 +27,7 @@ contract Testing
         else
         return false;
     }
+    //function checks the string and returns the bool value
     function checkString(string memory city) view public returns(uint256)
     {
         uint256 status=0;
@@ -38,12 +40,5 @@ contract Testing
         else
            return status;
     }
-    function returnarray()  view public returns(unit)
-    {
-        for(int256 i=0;i<3;i++)
-        {
-            arrayvalue.push(i);
-        }
-        return arrayvalue;
-    }
+    
 }
